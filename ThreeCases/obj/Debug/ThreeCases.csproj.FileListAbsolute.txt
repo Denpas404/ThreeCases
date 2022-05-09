@@ -9,3 +9,14 @@ C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.pdb
 C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\bin\Debug\ClassLibrary.dll
 C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\bin\Debug\ClassLibrary.pdb
 C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.csproj.CopyComplete
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\bin\Debug\ThreeCases.exe.config
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\bin\Debug\ThreeCases.exe
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\bin\Debug\ThreeCases.pdb
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\bin\Debug\ClassLibrary.dll
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\bin\Debug\ClassLibrary.pdb
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.csproj.AssemblyReference.cache
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.csproj.SuggestedBindingRedirects.cache
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.csproj.CoreCompileInputs.cache
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.csproj.CopyComplete
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.exe
+C:\Users\dpaas\source\repos\ThreeCases\ThreeCases\obj\Debug\ThreeCases.pdb

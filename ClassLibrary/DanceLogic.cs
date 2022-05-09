@@ -8,21 +8,28 @@ namespace ClassLibrary
 {
     public class DanceLogic
     {
-        String name;
-        int score;
+        public String name;
+        public int score;
+        private string v;
 
-
-        public DanceLogic(String inputName, int inputScore)
+        public DanceLogic()
         {
-            name = inputName;
-            score = inputScore;
+        }
+
+        public DanceLogic(string v)
+        {
+            this.v = v;
+        }
+
+        public DanceLogic(String name, int score)
+        {
+            this.name = name;
+            this.score = score;
         }
 
         public static DanceLogic operator +(DanceLogic dancer1, DanceLogic dancer2)
         {
-
-
-            return new DanceLogic(dancer1.score + dancer2.score);
+            return new DanceLogic(dancer1.name + " & " + dancer2.name, dancer1.score + dancer2.score);
         }
 
         

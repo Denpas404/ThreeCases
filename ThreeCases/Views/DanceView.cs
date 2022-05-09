@@ -7,57 +7,56 @@ using ClassLibrary;
 
 namespace ThreeCases.Views
 {
-    internal class DanceView
-    {
-        String p1Name;
-        String p2Name;
-        int p1Score;
-        int p2Score;
-
-        bool isValid = false;
-
-        public void danceInput()
-        {
-            Console.Clear();
-
-            Console.WriteLine("First contestant name: ");
-            p1Name = Console.ReadLine();
-
-            while (!isValid)
-            {
-                Console.WriteLine("First contestant score: ");
-                isValid = Int32.TryParse(Console.ReadLine(), out p1Score);
-            }
-
-            isValid = false;
-
-            Console.WriteLine("Second contestant name: ");
-            p2Name = Console.ReadLine();
-
-            while (!isValid)
-            {
-                Console.WriteLine("Second contestant score: ");
-                isValid= Int32.TryParse(Console.ReadLine(),out p2Score);
-            }
-
-        }
-
+    public class DanceView
+    {          
+        
 
         ClassLibrary.DanceLogic _danceLogic;
 
         public DanceView()
         {
+            _danceLogic = new DanceLogic();
 
-            danceInput();   
+            String name;
+            int score = 0;
 
-            DanceLogic dancer1 = new DanceLogic(p1Name, p1Score);
-            DanceLogic dancer2 = new DanceLogic(p2Name, p2Score);
+            bool isValid = false;
 
-            Console.WriteLine(_danceLogic.Calculate(dancer1 , dancer2));
+            Console.WriteLine("First contestant name: ");
+            name = Console.ReadLine();
 
+            while (!isValid)
+            {
+                Console.WriteLine("First contestant score: ");
+                isValid = Int32.TryParse(Console.ReadLine(), out score);
+            }
+
+            DanceLogic dancer1 = new DanceLogic(name, score);
+
+            isValid = false;
+
+            Console.WriteLine("Second contestant name: ");
+            name = Console.ReadLine();
+
+
+            while (!isValid)
+            {
+                Console.WriteLine("Second contestant score: ");
+                isValid = Int32.TryParse(Console.ReadLine(), out score);
+            }
+            DanceLogic dancer2 = new DanceLogic(name, score);
+
+            DanceLogic dancer3 = dancer1 + dancer2;
+
+            Console.WriteLine(dancer3.name + ": " +  dancer3.score);
+            
 
             Console.ReadKey();
 
         }
+            
+           
+
+               
     }
 }
