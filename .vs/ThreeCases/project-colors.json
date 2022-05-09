@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cafb55ae-e9be-4337-abe1-1479e8e00158": {
+      "ProjectGuid": "cafb55ae-e9be-4337-abe1-1479e8e00158",
+      "DisplayName": "ThreeCases",
+      "ColorIndex": 0
+    },
+    "ed33511f-1e1f-476a-8320-f59efd62a208": {
+      "ProjectGuid": "ed33511f-1e1f-476a-8320-f59efd62a208",
+      "DisplayName": "ThreeCasesClassLibrary",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "3bb29242-9510-4777-967c-863efed436c5": {
+      "ProjectGuid": "3bb29242-9510-4777-967c-863efed436c5",
+      "DisplayName": "ClassLibrary",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,6 @@
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\denpaa\source\repos\ThreeCases\ClassLibrary\obj\Debug\ClassLibrary.pdb
