@@ -18,11 +18,11 @@ namespace ClassLibrary
             score = inputScore;
         }
 
-        public static Calculate operator +(DanceLogic dancer1, DanceLogic dancer2)
+        public static DanceLogic operator +(DanceLogic dancer1, DanceLogic dancer2)
         {
 
 
-            return new Calculate(dancer1.score + dancer2.score);
+            return new DanceLogic(dancer1.score + dancer2.score);
         }
 
         
