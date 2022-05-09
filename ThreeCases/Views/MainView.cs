@@ -18,12 +18,10 @@ namespace ThreeCases.Views
             switch (choice)
             {
                 case '1':
-                    var soc = new SoccerView();
-                    
+                    var soc = new SoccerView();                    
                     break;
                 case '3':
-                    Console.WriteLine("Dance");
-                    Console.ReadKey();
+                    var dan = new DanceView();
                     break;
                 case '5':
                     Console.WriteLine("Password");

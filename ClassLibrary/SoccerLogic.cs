@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    internal class SoccerLogic
+    public class SoccerLogic
     {
         public string Calculate(int inputPass, int inputGoal)
         {

@@ -12,7 +12,7 @@ namespace ThreeCases.Views
         int passes;
         int goals;
 
-        public void test1()
+        public void userInput()
         {
             bool isValid = false;
             Console.Clear();
@@ -22,6 +22,7 @@ namespace ThreeCases.Views
                 Console.WriteLine("How many passes: ");
                 isValid = int.TryParse(Console.ReadLine(), out passes);
             }
+
             isValid = false;
             while (!isValid)
             {
@@ -34,7 +35,7 @@ namespace ThreeCases.Views
 
         public SoccerView()
         {
-            test1();
+            userInput();
 
             _soccerLogic = new SoccerLogic();
 
