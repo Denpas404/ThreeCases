@@ -24,8 +24,7 @@ namespace ThreeCases.Views
                     var dan = new DanceView();
                     break;
                 case '5':
-                    Console.WriteLine("Password");
-                    Console.ReadKey();
+                    var pas = new PassWordView();
                     break;
                 default:
                     break;

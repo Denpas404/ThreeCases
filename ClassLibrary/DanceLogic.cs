@@ -10,16 +10,10 @@ namespace ClassLibrary
     {
         public String name;
         public int score;
-        private string v;
 
         public DanceLogic()
         {
-        }
-
-        public DanceLogic(string v)
-        {
-            this.v = v;
-        }
+        }               
 
         public DanceLogic(String name, int score)
         {
@@ -31,7 +25,5 @@ namespace ClassLibrary
         {
             return new DanceLogic(dancer1.name + " & " + dancer2.name, dancer1.score + dancer2.score);
         }
-
-        
     }
 }

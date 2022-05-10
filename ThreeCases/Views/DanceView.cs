@@ -22,6 +22,8 @@ namespace ThreeCases.Views
 
             bool isValid = false;
 
+            Console.Clear();
+
             Console.WriteLine("First contestant name: ");
             name = Console.ReadLine();
 
@@ -35,7 +37,7 @@ namespace ThreeCases.Views
 
             isValid = false;
 
-            Console.WriteLine("Second contestant name: ");
+            Console.WriteLine("\nSecond contestant name: ");
             name = Console.ReadLine();
 
 
