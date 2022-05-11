@@ -7,26 +7,30 @@ using System.IO;
 
 namespace ClassLibrary
 {
+    public class ErrorRespons
+    {
+        public string ErrorMessege { get; set; }
+        public bool Succes { get; set; }
+    }
+
     public class PasswordLogic
     {
         String inputName;
         String inputPass;
         String controllName;
         String controllPass;
-
+        String save = "";
+        ReadWriteToFile fileSteam = new ReadWriteToFile();
 
         public PasswordLogic (string name, string pass)
         {
             inputName = name.ToLower();
-            inputPass = pass;   
-        }
+            inputPass = pass;
 
-        public void import()
-        {
-            String import = File.ReadAllText(@"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt");
-            var splitted = import.Split(';');
-            controllName = splitted[0].ToLower();
-            controllPass = splitted[1];
+            var fileRead = new ReadWriteToFile().ReadFile();
+            controllName = fileRead.Item1;
+            controllPass = fileRead.Item2;
+
         }
 
         public bool Login()
@@ -40,27 +44,16 @@ namespace ClassLibrary
             return ok;
         }
 
-        public string changeName(String name)
-        {
-            import();
-
-            inputName = name.ToLower();
-            String save = inputName + ";" + controllPass;
-            File.WriteAllText(@"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt", save);
-
-            return save;
-        }
-
         public bool checkPass(string pass)
         {
             char c;
 
-            bool upper, lower, number, symbol, space, notName;
-            upper = lower = number = symbol = space = notName = false;
+            bool upper, lower, symbol, space, notName;
+            upper = lower = symbol = space = notName = false;
 
             if (pass.Length < 12)
             {
-                return false;
+                return true; //new ErrorRespons() { ErrorMessege = "", Succes = false };
             }
 
             if (char.IsDigit(pass[0]) == true)
@@ -84,11 +77,7 @@ namespace ClassLibrary
                 if (char.IsLower(c))
                 {
                     lower = true;
-                }
-                //if (char.IsNumber(c))
-                //{
-                //    number = true;
-                //}
+                }               
                 if (char.IsSymbol(c))
                 {
                     symbol = true;
@@ -108,16 +97,26 @@ namespace ClassLibrary
             }            
             return true;
         }
-        public string changePass(String pass)
+
+        public String changeName(String name)
+        {
+            inputName = name.ToLower();
+            save = inputName + ";" + controllPass;
+            fileSteam.WriteToFile(save);
+
+            return save;
+        }
+
+        public void changePass(String pass)
         {
             String save = "";
-            import();
+                        
             if (checkPass(pass) == true)
             {                
                 save = controllName + ";" + pass;
-                File.WriteAllText(@"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt", save);
+                fileSteam.WriteToFile(save);               
             }
-            return save;
+            
         }
     }
 }

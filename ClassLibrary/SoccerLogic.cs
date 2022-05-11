@@ -8,33 +8,33 @@ namespace ClassLibrary
 {
     public class SoccerLogic
     {
-        public string Calculate(int inputPass, int inputGoal)
+        public string Calculate(int inputPass, String inputGoal)
         {
             int pass = inputPass;
-            int goal = inputGoal;
+            String goal = inputGoal;
             StringBuilder sb = new StringBuilder();
 
-            if (pass < 1)
-            {
-                Console.WriteLine("Shh");
-            }
-            else if (pass >= 1)
-            {
-                Console.WriteLine("*High FIVE* - Juhuuu ");
-                if (pass >= 1 && pass <= 10)
-                {
-                    for (int i = 0; i < pass; i++)
-                    {
-                        sb.Append("Huh! ");
-                    }
-                }
-            }
-            if (goal > 0 )
+
+            if (goal.ToLower() == "goal" || goal.ToLower() == "yes")
             {
                 sb.Append("Olé olé olé");
             }
-
-
+            else if (pass < 1)
+            {
+                sb.Append("Shh");
+            }
+            else if (pass > 1 && pass <= 9)
+            {                
+                    for (int i = 0; i < pass; i++)
+                    {
+                        sb.Append("Huh! ");
+                    }              
+            }
+            else if (pass > 9 )
+            {
+                sb.Append("*High FIVE* - Juhuuu ");
+            }
+            
             String jubel = sb.ToString();
             return jubel;
         }

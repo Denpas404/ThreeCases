@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeCases", "ThreeCases\Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{3BB29242-9510-4777-967C-863EFED436C5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C024C8FA-E5E9-4CC3-BCEB-82FF4168BD05}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTest", "ClassLibraryTest\ClassLibraryTest.csproj", "{FD9BBB05-CAB0-4965-BB40-7CD0212237EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,10 @@ Global
 		{3BB29242-9510-4777-967C-863EFED436C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BB29242-9510-4777-967C-863EFED436C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BB29242-9510-4777-967C-863EFED436C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9BBB05-CAB0-4965-BB40-7CD0212237EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9BBB05-CAB0-4965-BB40-7CD0212237EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9BBB05-CAB0-4965-BB40-7CD0212237EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9BBB05-CAB0-4965-BB40-7CD0212237EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

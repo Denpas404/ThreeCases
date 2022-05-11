@@ -10,7 +10,7 @@ namespace ThreeCases.Views
     internal class SoccerView
     {
         int passes;
-        int goals;
+        String goals;
 
         public void userInput()
         {
@@ -23,15 +23,12 @@ namespace ThreeCases.Views
                 isValid = int.TryParse(Console.ReadLine(), out passes);
             }
 
-            isValid = false;
-            while (!isValid)
-            {
-                Console.WriteLine("How many Goals: ");
-                isValid = int.TryParse(Console.ReadLine(), out goals);
-            }
+            Console.WriteLine("Are there any goals? ");
+            goals = Console.ReadLine();
+
         }
 
-        ClassLibrary.SoccerLogic _soccerLogic;
+        SoccerLogic _soccerLogic;
 
         public SoccerView()
         {

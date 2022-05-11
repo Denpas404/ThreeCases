@@ -45,6 +45,7 @@
     <Compile Include="DanceLogic.cs" />
     <Compile Include="PasswordLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadWriteToFile.cs" />
     <Compile Include="SoccerLogic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

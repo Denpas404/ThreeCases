@@ -9,8 +9,6 @@ namespace ThreeCases.Views
 {
     public class DanceView
     {          
-        
-
         ClassLibrary.DanceLogic _danceLogic;
 
         public DanceView()
@@ -40,25 +38,28 @@ namespace ThreeCases.Views
             Console.WriteLine("\nSecond contestant name: ");
             name = Console.ReadLine();
 
+            GetDanseObject(ref score, ref isValid);
+            DanceLogic dancer2 = new DanceLogic(name, score);
 
+            DanceLogic dancer3 = dancer1 + dancer2;
+
+            Console.WriteLine(dancer3.name + ": " + dancer3.score);
+
+
+            Console.ReadKey();
+
+        }
+
+        private static void GetDanseObject(ref int score, ref bool isValid)
+        {
             while (!isValid)
             {
                 Console.WriteLine("Second contestant score: ");
                 isValid = Int32.TryParse(Console.ReadLine(), out score);
             }
-            DanceLogic dancer2 = new DanceLogic(name, score);
-
-            DanceLogic dancer3 = dancer1 + dancer2;
-
-            Console.WriteLine(dancer3.name + ": " +  dancer3.score);
-            
-
-            Console.ReadKey();
-
         }
-            
-           
 
-               
+
+
     }
 }

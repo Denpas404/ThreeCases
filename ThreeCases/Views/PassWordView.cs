@@ -31,7 +31,7 @@ namespace ThreeCases.Views
 
             PasswordLogic obj = new PasswordLogic(inputName, inputPass);
 
-            obj.import();
+            //obj.import();
 
             if (obj.Login() == true)
             {
@@ -48,7 +48,7 @@ namespace ThreeCases.Views
         public void loggedin()
         {            
            PasswordLogic obj = new PasswordLogic(inputName,inputPass);
-            obj.import();
+            
 
             Console.WriteLine("1: Change username.\n3: Change password.");
             Char choice = Console.ReadKey().KeyChar;
