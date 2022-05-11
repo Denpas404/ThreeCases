@@ -22,7 +22,7 @@ namespace ClassLibrary
         String save = "";
         ReadWriteToFile fileSteam = new ReadWriteToFile();
 
-        public PasswordLogic (string name, string pass)
+        public String PasswordLogicInput(string name, string pass)
         {
             inputName = name.ToLower();
             inputPass = pass;
@@ -30,6 +30,8 @@ namespace ClassLibrary
             var fileRead = new ReadWriteToFile().ReadFile();
             controllName = fileRead.Item1;
             controllPass = fileRead.Item2;
+
+            return "";
 
         }
 
@@ -44,7 +46,7 @@ namespace ClassLibrary
             return ok;
         }
 
-        public bool checkPass(string pass)
+        public ErrorRespons checkPass(string pass)
         {
             char c;
 
@@ -53,17 +55,20 @@ namespace ClassLibrary
 
             if (pass.Length < 12)
             {
-                return true; //new ErrorRespons() { ErrorMessege = "", Succes = false };
+                return new ErrorRespons() { ErrorMessege = "Password to short!", Succes = false };                
+                //return false; 
             }
 
             if (char.IsDigit(pass[0]) == true)
             {
-                return true;
+                return new ErrorRespons() { ErrorMessege = "First letter can not be a number!", Succes = false };
+                //return false;
             }
 
             if (char.IsDigit(pass[pass.Length - 1]) == true)
             {
-                return true;
+                return new ErrorRespons() { ErrorMessege = "Last letter can not be a number!", Succes = false };
+                //return false;
             }
 
             for (int i = 0; i < pass.Length; i++)
@@ -90,12 +95,15 @@ namespace ClassLibrary
                 {
                     notName=  true;
                 }
-                if (upper && lower && symbol && space && notName)
-                {
-                    return true;
-                }               
-            }            
-            return true;
+                
+            }
+            if (upper && lower && symbol && space && notName)
+            {
+                return new ErrorRespons() { ErrorMessege = "upper && lower && symbol && space && notName = ok ", Succes = false };
+                //return true;
+            }
+            return new ErrorRespons() { ErrorMessege = "", Succes = false };
+            //return true;
         }
 
         public String changeName(String name)
@@ -104,19 +112,26 @@ namespace ClassLibrary
             save = inputName + ";" + controllPass;
             fileSteam.WriteToFile(save);
 
-            return save;
+            return "Username changed";
         }
 
-        public void changePass(String pass)
+        public String changePass(String pass)
         {
             String save = "";
-                        
-            if (checkPass(pass) == true)
-            {                
+            String status = checkPass(pass).ErrorMessege;
+
+            if (checkPass(pass).Equals(true))
+            {            
                 save = controllName + ";" + pass;
-                fileSteam.WriteToFile(save);               
+                fileSteam.WriteToFile(save);
+                status = "Password changed";
             }
-            
+            else  
+            {
+                Console.WriteLine(status);
+            }
+
+            return status ;
         }
     }
 }

@@ -9,8 +9,12 @@ namespace ClassLibrary
 {
     internal class ReadWriteToFile
     {
-        private const string _path = @"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt";
+        //Path on work pc
+        //private const string _path = @"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt";
 
+        //Path on home pc
+        private const string _path = @"C:/Users/dpaas/source/repos/ThreeCases/ThreeCases/infobase.txt";
+        
         public ReadWriteToFile()
         { 
         }

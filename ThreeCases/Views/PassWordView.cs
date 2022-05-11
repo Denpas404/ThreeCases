@@ -17,10 +17,7 @@ namespace ThreeCases.Views
         {                      
             Console.Clear();
 
-            //ClassLibrary.PasswordLogic _passwordLogic;
-            
-
-                        
+                                    
             Console.WriteLine("Username: ");
             inputName = Console.ReadLine();
 
@@ -29,9 +26,9 @@ namespace ThreeCases.Views
             inputPass = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
 
-            PasswordLogic obj = new PasswordLogic(inputName, inputPass);
+            PasswordLogic obj = new PasswordLogic();
 
-            //obj.import();
+            obj.PasswordLogicInput(inputName, inputPass);
 
             if (obj.Login() == true)
             {
@@ -47,8 +44,9 @@ namespace ThreeCases.Views
 
         public void loggedin()
         {            
-           PasswordLogic obj = new PasswordLogic(inputName,inputPass);
-            
+           PasswordLogic obj = new PasswordLogic();
+           
+            obj.PasswordLogicInput(inputName, inputPass); 
 
             Console.WriteLine("1: Change username.\n3: Change password.");
             Char choice = Console.ReadKey().KeyChar;
@@ -63,7 +61,7 @@ namespace ThreeCases.Views
                 case '3':
                     Console.WriteLine("Input new password: ");
                     String newPass = Console.ReadLine();
-                   obj.changePass(newPass);
+                    obj.changePass(newPass);
                     break;
                 default:
                     break;
