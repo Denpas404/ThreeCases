@@ -20,7 +20,12 @@
       "ProjectGuid": "3bb29242-9510-4777-967c-863efed436c5",
       "DisplayName": "ClassLibrary",
       "ColorIndex": 2
+    },
+    "fd9bbb05-cab0-4965-bb40-7cd0212237ee": {
+      "ProjectGuid": "fd9bbb05-cab0-4965-bb40-7cd0212237ee",
+      "DisplayName": "ClassLibraryTest",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

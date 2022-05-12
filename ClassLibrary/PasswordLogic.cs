@@ -22,7 +22,7 @@ namespace ClassLibrary
         String save = "";
         ReadWriteToFile fileSteam = new ReadWriteToFile();
 
-        public String PasswordLogicInput(string name, string pass)
+        public void PasswordLogicInput(string name, string pass)
         {
             inputName = name.ToLower();
             inputPass = pass;
@@ -30,9 +30,6 @@ namespace ClassLibrary
             var fileRead = new ReadWriteToFile().ReadFile();
             controllName = fileRead.Item1;
             controllPass = fileRead.Item2;
-
-            return "";
-
         }
 
         public bool Login()
@@ -55,19 +52,19 @@ namespace ClassLibrary
 
             if (pass.Length < 12)
             {
-                return new ErrorRespons() { ErrorMessege = "Password to short!", Succes = false };                
+                return new ErrorRespons() { ErrorMessege = "Password is to short", Succes = false };                
                 //return false; 
             }
 
-            if (char.IsDigit(pass[0]) == true)
+            if (char.IsDigit(pass[0]))
             {
-                return new ErrorRespons() { ErrorMessege = "First letter can not be a number!", Succes = false };
+                return new ErrorRespons() { ErrorMessege = "First letter can not be a number", Succes = false };
                 //return false;
             }
 
-            if (char.IsDigit(pass[pass.Length - 1]) == true)
+            if (char.IsDigit(pass[pass.Length - 1]))
             {
-                return new ErrorRespons() { ErrorMessege = "Last letter can not be a number!", Succes = false };
+                return new ErrorRespons() { ErrorMessege = "Last letter can not be a number", Succes = false };
                 //return false;
             }
 
