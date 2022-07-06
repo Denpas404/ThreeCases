@@ -8,15 +8,11 @@ using System.IO;
 namespace ClassLibrary
 {
     internal class ReadWriteToFile
-    {
-        //Path on work pc
-        //private const string _path = @"C:\Users\denpaa\source\repos\ThreeCases\ThreeCases\infobase.txt";
+    {       
 
         string fileName = "infobase.txt";
         string _path;
 
-        //Path on home pc
-        //private const string _path = @"C:/Users/dpaas/source/repos/ThreeCases/ThreeCases/infobase.txt";
 
         public ReadWriteToFile()
         {
@@ -37,7 +33,7 @@ namespace ClassLibrary
 
         public void WriteToFile(String input)
         {
-            File.WriteAllText(Path.Combine(Environment.CurrentDirectory, @"Data\", fileName, input);
+            File.WriteAllText(Path.Combine(Environment.CurrentDirectory, @"Data\", fileName), input);
         }
     }
 }
